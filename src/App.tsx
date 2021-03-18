@@ -5,14 +5,14 @@ const Game = (props: any) => {
   return <h1>I love {props.fav}</h1>;
 };
 
-function User(props: any) {
+const User = (props: any) => {
   return (
     <div>
-      <h1>I love {props.fav}</h1>
-      <h1>I love {props.fav}</h1>
+      <h1>id : {props.id}</h1>
+      <h1>name {props.name}</h1>
     </div>
   );
-}
+};
 
 const test = [
   {
@@ -33,6 +33,9 @@ const App = (): JSX.Element => (
   <div className="App">
     Hello World!
     <Game fav="LOL" />
+    {test.map((data) => (
+      <User key={data.id} id={data.id} name={data.name} />
+    ))}
     {}
   </div>
 );
