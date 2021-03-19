@@ -36,5 +36,6 @@ module.exports = {
     ],
     'react/destructuring-assignment': ['off', 'never'],
     '@typescript-eslint/no-explicit-any': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };
